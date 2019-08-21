@@ -7,10 +7,6 @@
     - https://www.eximiaco.tech/pt/2019/06/04/como-a-linguagem-rust-garante-que-erros-sejam-tratados/
     - https://www.eximiaco.tech/pt/2019/05/29/como-a-linguagem-rust-impede-na-compilacao-a-ocorrencia-de-acessos-invalidos-a-memoria/
 
-* Elixir 
-    - https://elixir-lang.org/
-    - $76k
-
 * Go 
     - https://golang.org/ 
     - $80k
@@ -26,14 +22,7 @@
     - Go não oferece suporte à aritmética de ponteiros.
     - Um dos propósitos da criação da linguagem Go é unira facilidade dese programar numa linguagem interpretada de tipagem dinâmica à segurança e eficiência de uma compiladade tipagem estática. Portanto, foram incluídas na linguagem técnicas como inferênciade tipos para prover construções concisaspara declaraçãoe atribuição de variáveis. Alémdisso,alinguagempossuiconstruçõesecomandosespecíficosquefacilitamaprogramaçãoconcorrente (GOLANG, 2015).
 
-* Swift 
-    - https://swift.org/
-    - $59k
 
-* Kotlin 
-    - https://kotlinlang.org/
-    - $57k
-    - https://dextra.com.br/pt/introducao-ao-kotlin-coroutines/
 
 
 * Articles

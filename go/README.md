@@ -1,6 +1,6 @@
 ## GO
  
-```
+```bash
 docker build -t goapp .
 docker run --rm -it goapp
 

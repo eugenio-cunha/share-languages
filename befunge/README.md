@@ -1,7 +1,7 @@
 # Befunge
 
 ## Docker
-```
+```bash
 docker pull esolang/befunge98
 
 docker run --rm -v "$PWD":/code:ro esolang/befunge98 befunge98 /code/hello.b98

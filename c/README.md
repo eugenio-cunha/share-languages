@@ -1,6 +1,6 @@
 ## C
 
-```
+```bash
 docker build -t capp .
 docker run --rm -it capp
 

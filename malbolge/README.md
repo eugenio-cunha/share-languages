@@ -1,7 +1,7 @@
 # Malbolge
 
 ## Docker
-```
+```bash
 docker pull esolang/malbolge
 
 docker run --rm -v "$PWD":/code:ro esolang/malbolge malbolge /code/hello.malbolge
