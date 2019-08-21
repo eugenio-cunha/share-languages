@@ -33,6 +33,7 @@
     - https://dextra.com.br/pt/introducao-ao-kotlin-coroutines/
     - https://www.ibm.com/developerworks/br/library/os-developers-know-rust/index.html
     - https://ralphavalonbr.wordpress.com/2016/04/20/10012/
+    - https://medium.com/developers-writing/fibonacci-sequence-algorithm-in-javascript-b253dc7e320e
 
 ## Explicar
 * Explicar paradigmas
