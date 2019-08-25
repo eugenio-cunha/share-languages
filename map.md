@@ -96,4 +96,4 @@ Antes de terminar o artigo, um ponto muito importante. Existem centenas de lingu
 
 ## Conclusões
 * Dominar paradigmas permiter entrar e sair de linguanges sem uma grande curva de apredizado 
-* aprender uma linguagem ajuda a entender outra linguagem exemplo: "“Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas    ao mesmo tempo” Se você tiver apenas um processador, seu programa ainda pode ser concorrente, mas não pode ser paralelo. Por outro lado, um programa concorrente     bem escrito pode ser executado de forma eficiente em paralelo em um multiprocessador"
+* aprender uma linguagem ajuda a entender outra linguagem exemplo: "“Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas    ao mesmo tempo” Se você tiver apenas um processador, seu programa ainda pode ser concorrente, mas não pode ser paralelo. Por outro lado, um programa concorrente     bem escrito pode ser executado de forma eficiente em paralelo em um multiprocessador"   

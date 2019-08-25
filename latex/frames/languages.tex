@@ -1,0 +1,277 @@
+\section{Nova Linguagen (Rust)}
+
+\begin{frame}[fragile]{Rust}
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.1]{images/rust.png}
+\end{figure}
+\begin{center}
+\begin{itemize}
+    \item Estruturada, imperativa compilada, concorrente, funcional
+    \item Segurança de memória sem \textbf{Garbage Collector} ou \textbf{Runtime}.
+    \item Concorrência sem disputa de dados.
+    \item Abstração sem \textbf{overhead}. (Alto nível com recursos de baixo nível).
+    \item Webassembly nativo.
+    \item Performance comparável a C
+\end{itemize}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Por que rust? - Webassembly nativo}
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.4]{images/webassembly.png}
+\end{figure}
+\begin{center}
+\small{Possui suporte nativo ao WebAssembly}
+\end{center}
+\begin{center}
+\small{https://webassembly.org/}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Por que rust? - Simulação N-body}
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.6]{images/n-body.jpg}
+\end{figure}
+\begin{center}
+\small{N-body permite calcular a evolução gravitacional de uma galáxia}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Por que rust? - Perfomance}
+\begin{tikzpicture}[font=\small]
+\pgfplotsset{
+    width=\textwidth,
+    height=0.5\textwidth
+}
+\begin{axis}
+[
+    xbar,
+    title = Simulação N-body,
+    y axis line style = { draw=none },
+    axis x line = none,
+    tickwidth = 0pt,
+    nodes near coords,
+    nodes near coords={\pgfmathprintnumber[precision=1000]\pgfplotspointmeta \ secs},
+    xmin=0,
+    ytick distance=1,
+    symbolic y coords = { Rust, C, C++, Fortran, Go, C\#, Java, Node.js, PHP, Python},
+]
+    \addplot[
+      fill=orange, 
+      bar width=5pt,
+    ] coordinates { 
+    (5.71,Rust)
+    (7.49,C)
+    (8.18,C++)
+    (8.28,Fortran)
+    (21.06,Go)
+    (21.79,C\#)
+    (21.94,Java)
+    (23.22,Node.js)
+    (300.0,PHP)
+    (720,Python)
+    };
+  \end{axis}
+\end{tikzpicture}
+\begin{center}
+\small{Simular a evolução gravitacional de 4 planetas com N = 50.000.000}
+\small{https://benchmarksgame-team.pages.debian.net/benchmarksgame/}
+\end{center}
+\end{frame}
+
+% Ownership
+\begin{frame}[fragile]{Que é Ownership}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+fn main() {
+    let s1 = String::from("Hello World");
+
+    let _s2 = s1; // <= Ownership
+
+    println!("{}", s1);
+}
+\end{lstlisting}
+\begin{itemize}  
+\item Algumas linguagens possuem \textbf{Carbage Collection}.
+\item Outras devem alocar e liberar memória de forma explícita. 
+\item Rust a memória é gerenciada através de um sistema de posse 
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Ownership - error[E0382]}
+
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+error[E0382]: use of moved value: `s1`
+ --> src/main.rs:5:20
+  |
+5 |     let _s2 = s1;
+  |         ^^^ value moved here
+6 |
+7 |     println!("{}", s1);
+  |                    ^^ value used here after move
+  |
+\end{lstlisting}
+\small{O conceito de \textbf{ownership} parece impor uma série de dificuldades ao 
+programador. Entretanto, ela se compensa!}
+\begin{itemize}  
+\item Gera  \textbf{código nativo} inteligente de desalocação.
+\item Sem os \textbf{memory-leaks} das linguagens não gerenciadas. 
+\item Sem os \textbf{overheads} de processamento causados pelos  \textbf{GCs}. 
+\end{itemize}
+\end{frame}
+    
+\begin{frame}[fragile]{Ownership Clone ou Referência}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+// Ownership
+fn main() {
+    let s1 = String::from("Hello World");
+
+    // Clona s1 para _s2
+    let _s2 = s1.clone();
+    
+    // OU
+    
+    // referencia ao valor s1, mas nao o possui.
+    let _s2 = &s1; 
+
+    println!("{}", s1);
+}
+\end{lstlisting}
+\end{frame}
+
+% Variáveis são imutáveis por padrão;
+\begin{frame}[fragile]{Variáveis e Mutabilidade}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+fn main() {
+    let x = 5;
+    println!("O valor de x e {}", x);
+    
+    x = 6;
+    println!("O valor de x e {}", x);
+}
+\end{lstlisting}
+\small{Em Rust, por padrão, as variáveis são \textbf{imutáveis}. }
+\end{frame}
+
+\begin{frame}[fragile]{Variáveis e Mutabilidade - error[E0384]}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> src/main.rs:4:5
+  |
+2 |     let x = 5;
+  |         ^ first assignment to `x`
+3 |     println!("O valor de x e: {}", x);
+  |
+5 |     x = 6;
+  |     ^^^^^ cannot assign twice to immutable variable
+\end{lstlisting}
+\small{O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.}
+\end{frame}
+
+\begin{frame}[fragile]{Variáveis e Mutabilidade - mut}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+fn main() {
+    let mut x = 5;
+    println!("O valor de x e {}", x);
+    
+    x = 6;
+    println!("O valor de x e {}", x);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+$ cargo run
+
+O valor de x e: 5
+O valor de x e: 6
+\end{lstlisting}
+
+\small{Estamos autorizados a mudar o valor 5 contido em x para 6 quando \textbf{mut} mut é usado. }
+\end{frame}
+
+% Shadowing
+\begin{frame}[fragile]{Shadowing}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+fn main() {
+
+    let x = 5;
+    
+    let x = x + 1;
+    
+    let x = x * 2;
+
+    println!("O valor de x e: {}", x);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+$ cargo run
+
+O valor de x e: 12
+\end{lstlisting}
+\small{Você pode declarar uma nova variável com o mesmo nome de uma variável anterior, e a nova variável sombreia a variável anterior.}
+\end{frame}
+
+% match
+\begin{frame}[fragile]{Operador match}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+fn fibonacci(n: i32) -> u64 {
+    match n {
+        0 => panic!("zero is not argument!"),
+        1 | 2 => 1,
+        50 => 12586269025,
+        100 => 354224848179261915075,
+        _  => fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+\end{lstlisting}
+\small{O operador \textbf{match} nos permite comparar um valor com uma série de padrões e executar um código com base no padrão que casar.}
+\end{frame}
+
+% Tratamento de Erros
+\begin{frame}[fragile]{Tratamento de Erros}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+\end{lstlisting}
+\small{Rust agrupa erros em duas categorias principais: \textbf{recuperáveis} e \textbf{irrecuperáveis}.}
+
+\begin{itemize}
+\item Erros recuperáveis são situações em que é razoável reportar o problema ao usuário.
+\item Erros irrecuperáveis são sempre sintomas de bugs.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Entrar em panic! ou Não Entrar em panic!}
+\lstset{language=Rust, style=boxed}
+\begin{lstlisting}
+use std::fs::File;
+
+fn main() {
+    let f = File::open("hello.txt");
+
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => {
+            panic!("fail: {:?}", error)
+        },
+    };
+}
+\end{lstlisting}
+\small{Em algumas situações é mais apropriado escrever código que entra em pânico em vez de retornar um Result.}
+
+\end{frame}
