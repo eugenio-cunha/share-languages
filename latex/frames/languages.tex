@@ -1,23 +1,46 @@
-\section{Nova Linguagen (Rust)}
+\section{Nova Linguagem (Rust)}
 
 \begin{frame}[fragile]{Rust}
 \begin{figure}[ht!]
   \centering
-  \includegraphics[scale=0.1]{images/rust.png}
+  \includegraphics[scale=0.08]{images/rust.png}
 \end{figure}
-\begin{center}
 \begin{itemize}
-    \item Estruturada, imperativa compilada, concorrente, funcional
-    \item Segurança de memória sem \textbf{Garbage Collector} ou \textbf{Runtime}.
-    \item Concorrência sem disputa de dados.
-    \item Abstração sem \textbf{overhead}. (Alto nível com recursos de baixo nível).
-    \item Webassembly nativo.
-    \item Performance comparável a C
+    \item \textbf{Moz://a} Mozilla Foundation
+    \item \textbf{Open Source} https://github.com/rust-lang/rust
+    \item \textbf{Star} 38.651  \textbf{Fork} 6.011 \textbf{Contributors} 2.457
 \end{itemize}
-\end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Por que rust? - Webassembly nativo}
+\begin{frame}[fragile]{O que me levou a me interessar por Rust?}
+\begin{center}
+\begin{itemize}
+    \item \textbf{Paradigmas:}
+    \begin{itemize}
+        \item Estruturada, imperativa, concorrente, funcional, compilada
+    \end{itemize}{}
+    \item \textbf{Segurança}
+    \begin{itemize}
+        \item Segurança de memória sem \textbf{Garbage Collector} ou \textbf{Runtime}.
+        \item Concorrência sem disputa de dados.
+    \end{itemize}
+    \item \textbf{Performance}
+    \begin{itemize}
+        \item Performance comparável a C
+        \item Abstração sem \textbf{overhead}.
+    \end{itemize}{}
+    \item \textbf{Casos de sucesso}
+\end{itemize}
+\end{center}
+\begin{center}
+    \begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.6]{images/cases.png}
+\end{figure}
+\end{center}{}
+\end{frame}
+
+\begin{frame}[fragile]{O que me levou a me interessar por Rust?}
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.4]{images/webassembly.png}
@@ -30,7 +53,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Por que rust? - Simulação N-body}
+\begin{frame}[fragile]{O que me levou a me interessar por Rust?}
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.6]{images/n-body.jpg}
@@ -40,7 +63,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Por que rust? - Perfomance}
+\begin{frame}[fragile]{O que me levou a me interessar por Rust?}
 \begin{tikzpicture}[font=\small]
 \pgfplotsset{
     width=\textwidth,
@@ -94,37 +117,19 @@ fn main() {
     println!("{}", s1);
 }
 \end{lstlisting}
-\begin{itemize}  
-\item Algumas linguagens possuem \textbf{Carbage Collection}.
-\item Outras devem alocar e liberar memória de forma explícita. 
-\item Rust a memória é gerenciada através de um sistema de posse 
-\end{itemize}
-\end{frame}
 
-\begin{frame}[fragile]{Ownership - error[E0382]}
-
-\lstset{language=Rust, style=boxed}
 \begin{lstlisting}
 error[E0382]: use of moved value: `s1`
- --> src/main.rs:5:20
-  |
-5 |     let _s2 = s1;
-  |         ^^^ value moved here
-6 |
-7 |     println!("{}", s1);
-  |                    ^^ value used here after move
-  |
 \end{lstlisting}
-\small{O conceito de \textbf{ownership} parece impor uma série de dificuldades ao 
-programador. Entretanto, ela se compensa!}
 \begin{itemize}  
+\item Rust a memória é gerenciada através de um sistema de posse
 \item Gera  \textbf{código nativo} inteligente de desalocação.
 \item Sem os \textbf{memory-leaks} das linguagens não gerenciadas. 
 \item Sem os \textbf{overheads} de processamento causados pelos  \textbf{GCs}. 
 \end{itemize}
 \end{frame}
-    
-\begin{frame}[fragile]{Ownership Clone ou Referência}
+
+\begin{frame}[fragile]{Ownership - Clone ou Referência}
 \lstset{language=Rust, style=boxed}
 \begin{lstlisting}
 // Ownership
@@ -150,39 +155,45 @@ fn main() {
 \begin{lstlisting}
 fn main() {
     let x = 5;
-    println!("O valor de x e {}", x);
     
     x = 6;
+
     println!("O valor de x e {}", x);
 }
 \end{lstlisting}
-\small{Em Rust, por padrão, as variáveis são \textbf{imutáveis}. }
-\end{frame}
-
-\begin{frame}[fragile]{Variáveis e Mutabilidade - error[E0384]}
-\lstset{language=Rust, style=boxed}
 \begin{lstlisting}
 error[E0384]: cannot assign twice to immutable variable `x`
- --> src/main.rs:4:5
-  |
-2 |     let x = 5;
-  |         ^ first assignment to `x`
-3 |     println!("O valor de x e: {}", x);
-  |
-5 |     x = 6;
-  |     ^^^^^ cannot assign twice to immutable variable
 \end{lstlisting}
-\small{O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.}
+\begin{itemize}
+    \item Em Rust, por padrão, as variáveis são \textbf{imutáveis}.
+    \item O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.
+\end{itemize}
 \end{frame}
+
+% \begin{frame}[fragile]{Variáveis e Mutabilidade - error[E0384]}
+% \lstset{language=Rust, style=boxed}
+% \begin{lstlisting}
+% error[E0384]: cannot assign twice to immutable variable `x`
+%  --> src/main.rs:4:5
+%   |
+% 2 |     let x = 5;
+%   |         ^ first assignment to `x`
+% 3 |     println!("O valor de x e: {}", x);
+%   |
+% 5 |     x = 6;
+%   |     ^^^^^ cannot assign twice to immutable variable
+% \end{lstlisting}
+% \small{O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.}
+% \end{frame}
 
 \begin{frame}[fragile]{Variáveis e Mutabilidade - mut}
 \lstset{language=Rust, style=boxed}
 \begin{lstlisting}
 fn main() {
     let mut x = 5;
-    println!("O valor de x e {}", x);
     
     x = 6;
+
     println!("O valor de x e {}", x);
 }
 \end{lstlisting}
@@ -193,8 +204,9 @@ $ cargo run
 O valor de x e: 5
 O valor de x e: 6
 \end{lstlisting}
-
-\small{Estamos autorizados a mudar o valor 5 contido em x para 6 quando \textbf{mut} mut é usado. }
+\begin{itemize}
+    \item A palavra chave \textbf{mut} autoriza a mudar o valor 5 contido em x para 6.
+\end{itemize}{}
 \end{frame}
 
 % Shadowing
@@ -202,7 +214,6 @@ O valor de x e: 6
 \lstset{language=Rust, style=boxed}
 \begin{lstlisting}
 fn main() {
-
     let x = 5;
     
     let x = x + 1;
@@ -218,10 +229,12 @@ $ cargo run
 
 O valor de x e: 12
 \end{lstlisting}
-\small{Você pode declarar uma nova variável com o mesmo nome de uma variável anterior, e a nova variável sombreia a variável anterior.}
+\begin{itemize}
+    \item Você pode declarar uma nova variável com o mesmo nome de uma variável anterior, e a nova variável sombreia a variável anterior.
+\end{itemize}
 \end{frame}
 
-% match
+% Operador Match
 \begin{frame}[fragile]{Operador match}
 \lstset{language=Rust, style=boxed}
 \begin{lstlisting}
@@ -235,7 +248,9 @@ fn fibonacci(n: i32) -> u64 {
     }
 }
 \end{lstlisting}
-\small{O operador \textbf{match} nos permite comparar um valor com uma série de padrões e executar um código com base no padrão que casar.}
+\begin{itemize}
+    \item O operador \textbf{match} nos permite comparar um valor com uma série de padrões e executar um código com base no padrão que casar.
+\end{itemize}
 \end{frame}
 
 % Tratamento de Erros
@@ -247,11 +262,13 @@ enum Result<T, E> {
     Err(E),
 }
 \end{lstlisting}
-\small{Rust agrupa erros em duas categorias principais: \textbf{recuperáveis} e \textbf{irrecuperáveis}.}
 
 \begin{itemize}
-\item Erros recuperáveis são situações em que é razoável reportar o problema ao usuário.
-\item Erros irrecuperáveis são sempre sintomas de bugs.
+    \item Rust agrupa erros em duas categorias principais:
+\begin{itemize}
+    \item \textbf{recuperáveis} - Erros recuperáveis são situações em que é razoável reportar o problema ao usuário.
+    \item \textbf{irrecuperáveis} - Erros irrecuperáveis são sempre sintomas de bugs.
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -272,6 +289,8 @@ fn main() {
     };
 }
 \end{lstlisting}
-\small{Em algumas situações é mais apropriado escrever código que entra em pânico em vez de retornar um Result.}
+\begin{itemize}
+    \item Em algumas situações é mais apropriado escrever código que entra em pânico em vez de retornar um Result.
+\end{itemize}
 
 \end{frame}
