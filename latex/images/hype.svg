@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   width="1240"
+   height="786.66669"
+   viewBox="0 0 1240 786.66669"
+   sodipodi:docname="hype.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <marker
+       inkscape:stockid="TriangleInL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleInL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1401"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(-0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1410"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="1.1741935"
+     inkscape:cx="474.5204"
+     inkscape:cy="-128.91357"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 6;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 591.04396,470.70515 c 19.93342,28.88218 37.92381,59.18356 60.65045,86.02558 16.44634,14.85192 33.28753,29.40849 52.05642,41.33235 19.41852,13.6921 40.67019,24.5899 61.15709,36.53693 18.74264,7.06183 37.04231,15.56722 56.95346,18.82124 38.01565,8.41132 75.77541,18.17824 113.82401,26.28557 42.51508,4.31035 84.82541,10.14337 127.17171,15.83349"
+     id="path1262"
+     inkscape:connector-curvature="0" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="184.44511"
+     y="538.83698"
+     id="text914"><tspan
+       sodipodi:role="line"
+       id="tspan912"
+       x="187.84094"
+       y="538.83698"
+       style="font-size:21.33333397px;text-align:center;text-anchor:middle">Gatilho de </tspan><tspan
+       sodipodi:role="line"
+       x="184.44511"
+       y="565.50366"
+       style="font-size:21.33333397px;text-align:center;text-anchor:middle"
+       id="tspan916">inovação</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="294.29669"
+     y="171.77657"
+     id="text920"><tspan
+       sodipodi:role="line"
+       id="tspan918"
+       x="294.29669"
+       y="171.77657"
+       style="font-size:21.33333397px">Pico de expectativas infladas</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="373.64285"
+     y="513.2876"
+     id="text924"><tspan
+       sodipodi:role="line"
+       id="tspan922"
+       x="373.64285"
+       y="513.2876"
+       style="font-size:21.33333397px">Vale da desilusão</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="775"
+     y="448.56229"
+     id="text928"><tspan
+       sodipodi:role="line"
+       id="tspan926"
+       x="775"
+       y="448.56229"
+       style="font-size:21.33333397px">Rampa de entendimento</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="985.35712"
+     y="299.52383"
+     id="text932"><tspan
+       sodipodi:role="line"
+       id="tspan930"
+       x="985.35712"
+       y="299.52383"
+       style="font-size:21.33333397px">Platô de produtividade</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="-584.59052"
+     y="61.953369"
+     id="text920-2"
+     transform="rotate(-89.986183)"><tspan
+       sodipodi:role="line"
+       id="tspan918-7"
+       x="-584.59052"
+       y="61.953369"
+       style="font-size:24px">Expectativas / Visibilidade</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="566.39435"
+     y="756.35156"
+     id="text924-0"><tspan
+       sodipodi:role="line"
+       id="tspan922-9"
+       x="566.39435"
+       y="756.35156"
+       style="font-size:24px">Tempo</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="985.35712"
+     y="653.80957"
+     id="text1019"><tspan
+       sodipodi:role="line"
+       id="tspan1017"
+       x="985.35712"
+       y="653.80957"
+       style="font-size:21.33333397px">fracasso</tspan></text>
+  <ellipse
+     style="fill:#f7941d;fill-opacity:1;stroke:none;stroke-width:1.49981105;stroke-opacity:1"
+     id="path1053"
+     cx="258.86261"
+     cy="558.25732"
+     rx="13.626373"
+     ry="13.200549" />
+  <ellipse
+     style="fill:#f7941d;fill-opacity:1;stroke:none;stroke-width:1.49981105;stroke-opacity:1"
+     id="path1053-3"
+     cx="446.26373"
+     cy="200.73259"
+     rx="13.626373"
+     ry="13.200549" />
+  <ellipse
+     style="fill:#f7941d;fill-opacity:1;stroke:none;stroke-width:1.49981105;stroke-opacity:1"
+     id="path1053-3-6"
+     cx="637.03296"
+     cy="491.14471"
+     rx="13.626373"
+     ry="13.200549" />
+  <ellipse
+     style="fill:#f7941d;fill-opacity:1;stroke:none;stroke-width:1.49981105;stroke-opacity:1"
+     id="path1053-3-6-0"
+     cx="1120.7692"
+     cy="330.18317"
+     rx="13.626373"
+     ry="13.200549" />
+  <path
+     style="fill:none;stroke:#f7941d;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 91.126374,676.80405 C 167.00181,644.87599 236.33489,595.74916 284.36702,528.12639 347.87719,443.01471 374.18558,338.54983 410.0987,240.49274 c 5.63118,-33.2717 49.01088,-58.07741 65.03768,-17.49857 28.0043,59.00094 40.4401,124.34639 70.93436,182.4902 19.04612,42.23586 55.2009,91.00604 107.06335,86.70355 61.53143,-21.41253 107.71078,-72.33402 167.6621,-97.71816 97.67905,-53.01433 211.01541,-64.74249 320.44981,-64.964 l 5.9243,-0.17424"
+     id="path1247"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 471.81319,216.06229 c 18.96344,9.63373 38.87208,16.73296 59.45054,22.03609 24.60317,6.1048 49.22741,12.84355 74.21293,17.04008 39.81658,5.29254 80.02313,6.55561 120.12292,7.63957 55.45251,-1.46904 110.90717,-1.79731 166.36504,-0.40548 64.76719,1.24597 129.50328,-2.60027 194.25608,-3.70511 21.4521,-0.57534 42.9041,-1.15069 64.3562,-1.72603"
+     id="path1264"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#TriangleOutL);marker-start:url(#TriangleInL)"
+     d="m 78.351648,127.49086 0.851649,592.74726 1069.670303,0.85164"
+     id="path1266"
+     inkscape:connector-curvature="0" />
+  <ellipse
+     style="fill:#f7941d;fill-opacity:1;stroke:none;stroke-width:1.49981105;stroke-opacity:1"
+     id="path1053-3-6-0-6"
+     cx="1021.1263"
+     cy="690.43042"
+     rx="13.626373"
+     ry="13.200549" />
+</svg>
