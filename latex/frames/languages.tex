@@ -3,10 +3,11 @@
 \begin{frame}[fragile]{Rust}
 \begin{figure}[ht!]
   \centering
-  \includegraphics[scale=0.08]{images/rust.png}
+%   \includegraphics[scale=0.08]{images/rust.png}
+  \includesvg[inkscapelatex=false, scale=0.35]{images/origin_rust.svg}
 \end{figure}
 \begin{itemize}
-    \item \textbf{Moz://a} Mozilla Foundation
+    \item \textbf{moz://a} Mozilla Foundation
     \item \textbf{Open Source} https://github.com/rust-lang/rust
     \item \textbf{Star} 38.651  \textbf{Fork} 6.011 \textbf{Contributors} 2.457
 \end{itemize}
@@ -169,22 +170,6 @@ error[E0384]: cannot assign twice to immutable variable `x`
     \item O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.
 \end{itemize}
 \end{frame}
-
-% \begin{frame}[fragile]{Variáveis e Mutabilidade - error[E0384]}
-% \lstset{language=Rust, style=boxed}
-% \begin{lstlisting}
-% error[E0384]: cannot assign twice to immutable variable `x`
-%  --> src/main.rs:4:5
-%   |
-% 2 |     let x = 5;
-%   |         ^ first assignment to `x`
-% 3 |     println!("O valor de x e: {}", x);
-%   |
-% 5 |     x = 6;
-%   |     ^^^^^ cannot assign twice to immutable variable
-% \end{lstlisting}
-% \small{O compilador não deixa atribuir mais de uma vez à variável imutável \textbf{x}.}
-% \end{frame}
 
 \begin{frame}[fragile]{Variáveis e Mutabilidade - mut}
 \lstset{language=Rust, style=boxed}

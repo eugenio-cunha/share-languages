@@ -185,61 +185,7 @@
   \end{axis}
 \end{tikzpicture}
 \begin{center}
-\small{\% de desenvolvedores profissionais}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Linguagens mais odiadas}
-\begin{tikzpicture}[font=\small]
-\pgfplotsset{
-    width=0.9\textwidth,
-    height=0.8\textwidth
-}
-\begin{axis}
-[
-    xbar,
-    y axis line style = { draw=none },
-    axis x line = none,
-    tickwidth = 0pt,
-    nodes near coords,
-    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta \%},
-    enlarge y limits=0.02,
-    ytick distance=1,
-    y dir=reverse,
-    symbolic y coords = {
-        VBA,
-        Objective-C,
-        Assembly,
-        C,
-        PHP,
-        Erlang,
-        Ruby,
-        R,
-        C++,
-        Java
-    },
-]
-    \addplot[
-      fill=orange, 
-      bar width=3pt, 
-      label style={font=\small}, 
-      tick label style={font=\small}
-    ] coordinates { 
-        (75.2,VBA) 
-        (68.7,Objective-C) 
-        (64.4,Assembly) 
-        (57.5,C) 
-        (54.2,PHP) 
-        (52.6,Erlang) 
-        (49.7,Ruby) 
-        (48.3,R) 
-        (48.0,C++) 
-        (46.6,Java)
-    };
-  \end{axis}
-\end{tikzpicture}
-\begin{center}
-\small{\% de desenvolvedores que não demonstraram interesse de usar}
+\small{Quais são as linguagens mais populares?}
 \end{center}
 \end{frame}
 
@@ -293,7 +239,7 @@
   \end{axis}
 \end{tikzpicture}
 \begin{center}
-\small{\% de desenvolvedores que demonstraram interesse de aprender}
+\small{Qual linguagem você não usa e deseja aprender?}
 \end{center}
 \end{frame}
 
@@ -348,16 +294,70 @@
 \end{tikzpicture}
 
 \begin{center}
-\small{\% de desenvolvedores que demonstraram interesse de continuar}
+\small{Qual linguagem você usa e deseja continuar?}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Linguagens mais temidas}
+\begin{tikzpicture}[font=\small]
+\pgfplotsset{
+    width=0.9\textwidth,
+    height=0.8\textwidth
+}
+\begin{axis}
+[
+    xbar,
+    y axis line style = { draw=none },
+    axis x line = none,
+    tickwidth = 0pt,
+    nodes near coords,
+    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta \%},
+    enlarge y limits=0.02,
+    ytick distance=1,
+    y dir=reverse,
+    symbolic y coords = {
+        VBA,
+        Objective-C,
+        Assembly,
+        C,
+        PHP,
+        Erlang,
+        Ruby,
+        R,
+        C++,
+        Java
+    },
+]
+    \addplot[
+      fill=orange, 
+      bar width=3pt, 
+      label style={font=\small}, 
+      tick label style={font=\small}
+    ] coordinates { 
+        (75.2,VBA) 
+        (68.7,Objective-C) 
+        (64.4,Assembly) 
+        (57.5,C) 
+        (54.2,PHP) 
+        (52.6,Erlang) 
+        (49.7,Ruby) 
+        (48.3,R) 
+        (48.0,C++) 
+        (46.6,Java)
+    };
+  \end{axis}
+\end{tikzpicture}
+\begin{center}
+\small{Qual linguagem você usa e não quer continuar?}
 \end{center}
 \end{frame}
 
 \begin{frame}[fragile]{Salário e experiência por linguagens}
 \begin{figure}[ht!]
   \centering
-   \includesvg[inkscapelatex=false, scale=0.55]{images/salary_language.svg}
+  \includesvg[inkscapelatex=false, scale=0.55]{images/salary_language.svg}
 \end{figure}
 \begin{center}
-\small{Salário | Experiência | Quantidade}
+\small{Salário | Experiência}
 \end{center}
 \end{frame}
